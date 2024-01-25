@@ -1,14 +1,24 @@
+import { Size } from "./size";
+
 export class Dimension {
 
-  constructor(private readonly name: string, private readonly value: number) {
-    this.name = name;
-    this.value = value;
+  private _size: Size | undefined;
+
+  public constructor(private readonly _name: string, private readonly _value: number ) {}
+
+  set size(size: Size) {
+    this._size = size;
   }
 
-  getValue(): number {
-    return this.value;
+  get size(): Size | undefined {
+    return this._size;
   }
-  getName(): string {
-    return this.name
+
+  get value(): number {
+    return this._value;
+  }
+
+  get name(): string {
+    return this._name;
   }
 }
