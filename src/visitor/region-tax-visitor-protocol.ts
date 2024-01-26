@@ -1,3 +1,5 @@
-export interface RegionTaxVisitor{
-  getPriceWithTax(currentPrice: number): number
+import { VisitableProtocol } from "./visitable-product-protocol";
+
+export interface RegionTaxVisitorProtocol{
+  getProductPriceWithTaxes(product: VisitableProtocol): number
 }

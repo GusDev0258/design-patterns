@@ -1,8 +1,11 @@
+import { Cart } from "composite/cart";
 import { State } from "./state-protocol";
 import { WaitPayment } from "./wait-payment";
 
 export class ShipmentOrder {
   private state: State = new WaitPayment(this);
+
+  constructor(private readonly cart: Cart) {}
 
   public setState(state: State): void {
     this.state = state;

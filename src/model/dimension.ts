@@ -21,4 +21,8 @@ export class Dimension {
   get name(): string {
     return this._name;
   }
+
+  toString() {
+    return this.value;
+  }
 }
