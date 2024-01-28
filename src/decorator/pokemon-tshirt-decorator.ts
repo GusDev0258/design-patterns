@@ -3,7 +3,6 @@ import { ProductProtocol } from "./product-decorator-protocol";
 import { Product } from "../model/product";
 
 export class PokemonTShirtDecorator implements ProductProtocol {
-
   public constructor(private readonly product: Product) {}
 
   getName(): string {
